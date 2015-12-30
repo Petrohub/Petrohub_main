@@ -8,7 +8,15 @@ class User < ActiveRecord::Base
   def role?
     self.class.name.downcase.to_sym
   end
-
+  def admin?
+    self.type == self.class.name
+  end
+  def supplier?
+    self.type == self.class.name
+  end
+  def retailer?
+    self.type == self.class.name
+  end
 
 private
 
