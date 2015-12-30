@@ -9,13 +9,13 @@ class User < ActiveRecord::Base
     self.class.name.downcase.to_sym
   end
   def admin?
-    self.type == self.class.name
+    self.type == "Admin"
   end
   def supplier?
-    self.type == self.class.name
+    self.type == "Supplier"
   end
   def retailer?
-    self.type == self.class.name
+    self.type == "Retailer"
   end
 
 private

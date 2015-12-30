@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-
+  devise_for :users, skip: [:registration]
   devise_for :retailers
   devise_for :suppliers
   devise_for :admins
