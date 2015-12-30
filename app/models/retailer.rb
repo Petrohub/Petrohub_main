@@ -1,0 +1,2 @@
+class Retailer < User
+end
