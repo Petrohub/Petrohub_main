@@ -4,27 +4,9 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
-  def admin?
-    self.type == "Admin"
-  end
-
-  def retailer?
-    self.type == "Retailer"
-  end
-
-  def supplier?
-    self.type == "Supplier"
-  end
 
   def role?
-    case self.type
-    when "Admin"
-      :admin
-    when "Retailer"
-      :retailer
-    when "Supplier"
-      :supplier
-    end
+    self.class.name.downcase.to_sym
   end
 
 
