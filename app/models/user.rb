@@ -19,7 +19,7 @@ class User < ActiveRecord::Base
   end
 
 private
-
+#this method generates and assigns random account number to the users
   def generate_account_number
     rand_num = rand(6**6).to_s + rand(10).to_s
     if self.admin?
