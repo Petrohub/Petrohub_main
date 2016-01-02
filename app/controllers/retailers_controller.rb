@@ -1,9 +1,8 @@
 class RetailersController < ApplicationController
-  before_action do
-    :authenticate_user!
-    redirect_to supplier_dashboard_path if current_user.supplier?
-  end
+  before_action :authenticate_retailer!
+
   def dashboard
     @retailer = current_user
   end
+
 end

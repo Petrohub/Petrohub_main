@@ -1,9 +1,6 @@
 class AdminsController < ApplicationController
-  before_action do
-    :authenticate_admin!
-    redirect_to retailer_dashboard_path if current_user.retailer?
-    redirect_to supplier_dashboard_path if current_user.supplier?
-  end
+  before_action :authenticate_admin!
+
 
   def dashboard
     @admin = current_user
