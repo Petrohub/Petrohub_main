@@ -3,9 +3,6 @@ class AdminsController < ApplicationController
 
 
   def dashboard
-    @admin = current_user
-    @retailers = Retailer.all
-    @suppliers = Supplier.all
   end
 
 

@@ -18,6 +18,8 @@ class User < ActiveRecord::Base
     self.type == "Retailer"
   end
 
+  
+
 private
 #this method generates and assigns random account number to the users
   def generate_account_number

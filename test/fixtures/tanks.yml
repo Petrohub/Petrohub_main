@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  type_of_fuel: MyString
+  size: MyString
+  registration_id: MyString
+  station_id: 
+
+two:
+  type_of_fuel: MyString
+  size: MyString
+  registration_id: MyString
+  station_id: 

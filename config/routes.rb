@@ -2,6 +2,11 @@ Rails.application.routes.draw do
 
 
 
+
+  resources :stations do
+    resources :tanks
+  end
+  
   devise_for :users, skip: [:registration]
   devise_for :retailers
   devise_for :suppliers

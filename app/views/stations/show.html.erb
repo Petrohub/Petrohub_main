@@ -1,0 +1,69 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Brand:</strong>
+  <%= @station.brand %>
+</p>
+
+<p>
+  <strong>Business name:</strong>
+  <%= @station.business_name %>
+</p>
+
+<p>
+  <strong>Tax:</strong>
+  <%= @station.tax_id %>
+</p>
+
+<p>
+  <strong>Phone number:</strong>
+  <%= @station.phone_number %>
+</p>
+
+<p>
+  <strong>Contact person:</strong>
+  <%= @station.contact_person %>
+</p>
+
+<p>
+  <strong>Cell number:</strong>
+  <%= @station.cell_number %>
+</p>
+
+<p>
+  <strong>Address1:</strong>
+  <%= @station.address1 %>
+</p>
+
+<p>
+  <strong>Address2:</strong>
+  <%= @station.address2 %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @station.city %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @station.state %>
+</p>
+
+<p>
+  <strong>Zip:</strong>
+  <%= @station.zip %>
+</p>
+
+<p>
+  <strong>Station reg number:</strong>
+  <%= @station.station_reg_number %>
+</p>
+
+<p>
+  <strong>Retailer:</strong>
+  <%= @station.retailer %>
+</p>
+
+<%= link_to 'Edit', edit_station_path(@station) %> |
+<%= link_to 'Back', stations_path %>

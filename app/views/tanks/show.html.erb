@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Type of fuel:</strong>
+  <%= @tank.type_of_fuel %>
+</p>
+
+<p>
+  <strong>Size:</strong>
+  <%= @tank.size %>
+</p>
+
+<p>
+  <strong>Registration:</strong>
+  <%= @tank.registration_id %>
+</p>
+
+<p>
+  <strong>Station:</strong>
+  <%= @tank.station %>
+</p>
+
+<%= link_to 'Edit', edit_tank_path(@tank) %> |
+<%= link_to 'Back', tanks_path %>

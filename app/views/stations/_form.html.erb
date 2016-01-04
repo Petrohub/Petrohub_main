@@ -1,0 +1,23 @@
+<%= simple_form_for(@station) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :brand %>
+    <%= f.input :business_name %>
+    <%= f.input :tax_id %>
+    <%= f.input :phone_number %>
+    <%= f.input :contact_person %>
+    <%= f.input :cell_number %>
+    <%= f.input :address1 %>
+    <%= f.input :address2 %>
+    <%= f.input :city %>
+    <%= f.input :state %>
+    <%= f.input :zip %>
+    <%= f.input :station_reg_number %>
+    <%= f.association :retailer %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

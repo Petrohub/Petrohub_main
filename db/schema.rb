@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151230161728) do
+ActiveRecord::Schema.define(version: 20160104152813) do
 
   create_table "admins", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -23,10 +23,41 @@ ActiveRecord::Schema.define(version: 20151230161728) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "stations", force: :cascade do |t|
+    t.string   "brand"
+    t.string   "business_name"
+    t.string   "tax_id"
+    t.string   "phone_number"
+    t.string   "contact_person"
+    t.string   "cell_number"
+    t.string   "address1"
+    t.string   "address2"
+    t.string   "city"
+    t.string   "state"
+    t.string   "zip"
+    t.string   "station_reg_number"
+    t.integer  "retailer_id"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+  end
+
+  add_index "stations", ["retailer_id"], name: "index_stations_on_retailer_id"
+
   create_table "suppliers", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  create_table "tanks", force: :cascade do |t|
+    t.string   "type_of_fuel"
+    t.string   "size"
+    t.string   "registration_id"
+    t.integer  "station_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
+  add_index "tanks", ["station_id"], name: "index_tanks_on_station_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
