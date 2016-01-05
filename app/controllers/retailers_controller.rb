@@ -3,7 +3,11 @@ class RetailersController < ApplicationController
 
 
   def dashboard
-    @retailer = current_user
+    @retailer = current_retailer
+  end
+
+  def my_stations
+    @stations = current_retailer.stations.all
   end
 
 end

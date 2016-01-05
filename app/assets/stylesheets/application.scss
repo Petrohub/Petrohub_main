@@ -1,3 +1,48 @@
 // "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+.page-header {
+  position: relative;
+  padding-bottom: 0px;
+
+  &:first-child {
+    margin-top: 20px;
+  }
+  h1,h2,h3,h4,h5,h6{
+    max-width: 55%;
+  }
+}
+body {
+  padding-top: 70px;
+}
+
+.navbar-brand {
+     font-weight: bold;
+}
+
+@import url(http://fonts.googleapis.com/css?family=Lato:400,700);
+
+$body-bg:                                                   #ecf0f1;
+$font-family-sans-serif:                'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$navbar-height:                                        45px;
+$navbar-default-bg:                          white;
+$navbar-default-brand-color:      #c0392b;
+$brand-primary:                                    #c0392b;
+$jumbotron-bg:                                         white;
+
+@import 'bootstrap';
+
+.center {
+     text-align: center;
+}
+
+
+
+.btn.btn-primary.navbar-btn {
+ color: #fff;
+}
+
+form {
+  max-width: 500px;
+}

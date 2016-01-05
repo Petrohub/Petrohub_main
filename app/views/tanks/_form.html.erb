@@ -1,11 +1,11 @@
-<%= simple_form_for([@station,@tank])do |f| %>
+<%= simple_form_for(@tank)do |f| %>
   <%= f.error_notification %>
 
   <div class="form-inputs">
     <%= f.input :type_of_fuel %>
     <%= f.input :size %>
     <%= f.input :registration_id %>
-    <%= f.association :station %>
+    <%= f.association :station, as: :hidden %>
   </div>
 
   <div class="form-actions">

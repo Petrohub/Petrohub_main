@@ -20,9 +20,10 @@
         <td><%= tank.size %></td>
         <td><%= tank.registration_id %></td>
         <td><%= tank.station %></td>
-        <td><%= link_to 'Show', tank %></td>
-        <td><%= link_to 'Edit', edit_tank_path(tank) %></td>
-        <td><%= link_to 'Destroy', tank, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', station_tanks_path %></td>
+        <td><%= link_to 'Edit', edit_station_tank_path(:id => tank.id,
+                                                  :station_id => @station.id)%></td>
+        <td><%= link_to 'Destroy', [@station, tank], method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
