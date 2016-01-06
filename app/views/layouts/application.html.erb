@@ -9,24 +9,34 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body class='contrast-dark'>
+  <header>
+<%= render 'layouts/header' %>
+</header>
+   <div id="wrapper">
+     <div id='main-nav-bg'></div>
+         <nav class='main-nav-fixed' id='main-nav'>
+          <% if retailer_signed_in? %>
+            <%= render 'layouts/retailer_sidebar' %>
+          <% elsif supplier_signed_in? %>
+            <%= render 'layouts/supplier_sidebar' %>
+          <%end%>
+         </div>
+        </nav>
+      <% flash.each do |name, msg| %>
+        <%= content_tag(:div, msg, class: "alert alert-info") %>
+      <% end %>
+      <section id='content'>
+        <div class='container'>
+          <div class='row' id='content-wrapper'>
+            <div class='col-xs-12'>
+          <%= yield %>
+        </div>
+      </div>
+        </section>
+      </div>
 
-    <div class="container-fluid">
 
-  <% flash.each do |name, msg| %>
-    <%= content_tag(:div, msg, class: "alert alert-info") %>
-  <% end %>
-
-  <%= render 'layouts/header' %>
-<%= yield %>
-  <div class="row">
-  <% if retailer_signed_in? %>
-    <%= render 'layouts/retailer_sidebar' %>
-  <% elsif supplier_signed_in? %>
-    <%= render 'layouts/supplier_sidebar' %>
-  <%end%>
-
-</div>
-
+   </div>
 </body>
 </html>

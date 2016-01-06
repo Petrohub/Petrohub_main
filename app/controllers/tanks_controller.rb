@@ -28,7 +28,7 @@ class TanksController < ApplicationController
   def create
     @tank = Tank.new(tank_params)
     @tank.station = @station
-
+    
     respond_to do |format|
       if @station.tank.save
         format.html { redirect_to @tank, notice: 'Tank was successfully created.' }

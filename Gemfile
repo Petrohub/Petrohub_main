@@ -15,6 +15,8 @@ gem 'devise', '~> 3.5', '>= 3.5.3'
 gem 'simple_form', '~> 3.1'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 gem 'cancancan', '~> 1.10'
+gem 'country_select'
+gem 'compass-rails', '~> 2.0', '>= 2.0.5'
 
 
 group :development, :test do

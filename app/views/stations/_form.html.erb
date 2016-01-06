@@ -1,23 +1,26 @@
+<div class='col-sm-7 col-sm-offset-1'>
 <%= simple_form_for(@station) do |f| %>
-  <%= f.error_notification %>
+ <%= f.error_notification %>
 
-  <div class="form-inputs">
-    <%= f.input :brand %>
-    <%= f.input :business_name %>
-    <%= f.input :tax_id %>
-    <%= f.input :phone_number %>
-    <%= f.input :contact_person %>
-    <%= f.input :cell_number %>
-    <%= f.input :address1 %>
-    <%= f.input :address2 %>
-    <%= f.input :city %>
-    <%= f.input :state %>
-    <%= f.input :zip %>
-    <%= f.input :station_reg_number %>
-    <%= f.association :retailer %>
-  </div>
+ <div class="form-inputs">
+   <%= f.input :brand %>
+   <%= f.input :business_name %>
+   <%= f.input :tax_id %>
+   <%= f.input :phone_number %>
+   <%= f.input :contact_person %>
+   <%= f.input :cell_number %>
+   <%= f.input :address1 %>
+   <%= f.input :address2 %>
+   <%= f.input :city %>
+   <%= f.input :state, :label => "State", :collection => us_states, :selected => "New Jersey"%>
+   <%= f.input :zip %>
+   <%= f.input :station_reg_number %>
+   <%= f.association :retailer, :as => :hidden %>
+ </div>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
-  </div>
+ <div class="form-actions">
+   <%= f.button :submit, class: "btn btn-primary" %>
+ </div>
 <% end %>
+<%= link_to 'Back', stations_path %>
+</div>
