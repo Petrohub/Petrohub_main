@@ -20,5 +20,5 @@
   <%= @tank.station %>
 </p>
 
-<%= link_to 'Edit', edit_tank_path(@tank) %> |
-<%= link_to 'Back', station_tank_path %>
+<%= link_to 'Edit', edit_station_tank_path(@station,@tank) %> |
+<%= link_to 'Back', station_tanks_path(@station) %>

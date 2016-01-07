@@ -1,5 +1,4 @@
 <h1>New Tank</h1>
 
 <%= render 'form' %>
-
-<%= link_to 'Back', station_tank_path[params[:station_id]] %>
+<%= link_to "Back", station_tanks_path(@station, @tanks)%>
