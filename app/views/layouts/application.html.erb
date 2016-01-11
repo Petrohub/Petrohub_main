@@ -20,6 +20,8 @@
             <%= render 'layouts/retailer_sidebar' %>
           <% elsif supplier_signed_in? %>
             <%= render 'layouts/supplier_sidebar' %>
+            <%else%>
+            <%= render 'layouts/home_sidebar'%>
           <%end%>
          </div>
         </nav>
