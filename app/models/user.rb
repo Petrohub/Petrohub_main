@@ -2,12 +2,14 @@ class User < ActiveRecord::Base
   before_validation :generate_account_number
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
+  
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
   def role?
     self.class.name.downcase.to_sym
   end
+
   def admin?
     self.type == "Admin"
   end
