@@ -1,20 +1,20 @@
 <div class='col-sm-7 col-sm-offset-1'>
-<%= simple_form_for(@station) do |f| %>
+<%= simple_form_for(@station,:html => { :class => "form-horizontal" }) do |f| %>
  <%= f.error_notification %>
 
  <div class="form-inputs">
-   <%= f.input :brand %>
-   <%= f.input :business_name %>
-   <%= f.input :tax_id %>
-   <%= f.input :phone_number %>
-   <%= f.input :contact_person %>
-   <%= f.input :cell_number %>
-   <%= f.input :address1 %>
-   <%= f.input :address2 %>
-   <%= f.input :city %>
+   <%= f.input :brand, label: "Brand"%>
+   <%= f.input :business_name, label: "Business Name" %>
+   <%= f.input :tax_id , label: "Tax ID"%>
+   <%= f.input :phone_number, label: "Phone Number" %>
+   <%= f.input :contact_person, label: "Contact Person" %>
+   <%= f.input :cell_number, label: "Cell Number of contact person" %>
+   <%= f.input :address1, label: "Address" %>
+   <%= f.input :address2, label: "Address" %>
+   <%= f.input :city, label: "City" %>
    <%= f.input :state, :label => "State", :collection => us_states, :selected => "New Jersey"%>
-   <%= f.input :zip %>
-   <%= f.input :station_reg_number %>
+   <%= f.input :zip, label: "Zip code"%>
+   <%= f.input :station_reg_number, label: "Station Registration #" %>
    <%= f.association :retailer, :as => :hidden %>
  </div>
 

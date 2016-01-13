@@ -2,9 +2,11 @@
         <div class="navbar-header">
           <a class="navbar-brand" href="/">Petrohub</a>
         </div>
+        <% if retailer_signed_in? || supplier_signed_in? %>
         <a class='toggle-nav btn pull-left' href='#'>
          <i class='icon-reorder'></i>
        </a>
+       <%end%>
           <ul class="nav">
 
             <% if retailer_signed_in? %>
@@ -15,24 +17,23 @@
               <li><%= link_to "Account Settings", edit_supplier_registration_path %></li>
               <li><%= link_to "Log Out", destroy_supplier_session_path, method: :delete %></li>
         <%else%>
+        <li><%= link_to "About", pages_about_path %></li>
+        <li><%= link_to "Contact Us",pages_contact_path%></li>
         <li class="dropdown">
-           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sign In<span class="caret"></span></a>
+           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Retailer?<span class="caret"></span></a>
            <ul class="dropdown-menu">
-            <li><%= link_to "Retailer Sign In", retailer_session_path %></li>
-            <li><%= link_to "Supplier Sign In", supplier_session_path %></li>
+            <li><%= link_to "Sign In", retailer_session_path %></li>
+            <li><%= link_to "Sign Up", new_retailer_registration_path %></li>
            </ul>
        </li>
        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sign Up<span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Supplier?<span class="caret"></span></a>
           <ul class="dropdown-menu">
-           <li><%= link_to "Retailer Sign Up", new_retailer_registration_path %></li>
-           <li><%= link_to "Supplier Sign Up", new_supplier_registration_path %></li>
+            <li><%= link_to "Sign In", supplier_session_path %></li>
+           <li><%= link_to "Sign Up", new_supplier_registration_path %></li>
           </ul>
       </li>
         <% end %>
+
           </ul>
-          <form class="navbar-form navbar-right">
-            <input type="text" class="form-control" placeholder="Search...">
-          </form>
-        </div>
     </nav>
