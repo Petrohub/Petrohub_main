@@ -11,7 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160119173235) do
+ActiveRecord::Schema.define(version: 20160104152813) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "admins", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -41,7 +44,7 @@ ActiveRecord::Schema.define(version: 20160119173235) do
     t.datetime "updated_at",         null: false
   end
 
-  add_index "stations", ["retailer_id"], name: "index_stations_on_retailer_id"
+  add_index "stations", ["retailer_id"], name: "index_stations_on_retailer_id", using: :btree
 
   create_table "suppliers", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -57,7 +60,7 @@ ActiveRecord::Schema.define(version: 20160119173235) do
     t.datetime "updated_at",      null: false
   end
 
-  add_index "tanks", ["station_id"], name: "index_tanks_on_station_id"
+  add_index "tanks", ["station_id"], name: "index_tanks_on_station_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -86,11 +89,12 @@ ActiveRecord::Schema.define(version: 20160119173235) do
     t.string   "zip_code"
     t.string   "years_in_business"
     t.string   "account_number"
-    t.boolean  "approved"
   end
 
-  add_index "users", ["account_number"], name: "index_users_on_account_number"
-  add_index "users", ["email"], name: "index_users_on_email", unique: true
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  add_index "users", ["account_number"], name: "index_users_on_account_number", using: :btree
+  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
+  add_foreign_key "stations", "retailers"
+  add_foreign_key "tanks", "stations"
 end

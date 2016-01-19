@@ -1,4 +1,4 @@
 class Station < ActiveRecord::Base
-  belongs_to :retailer
+  belongs_to :user
   has_many :tanks
 end

@@ -73,6 +73,7 @@ GEM
       compass (~> 1.0.0)
       sass-rails (< 5.1)
       sprockets (< 2.13)
+    concurrent-ruby (1.0.0)
     countries (1.2.2)
       currencies (~> 0.4.2)
       i18n_data (~> 0.7.0)

@@ -16,7 +16,7 @@ gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 gem 'cancancan', '~> 1.10'
 gem 'country_select'
 gem 'compass-rails', '~> 2.0', '>= 2.0.5'
-
+gem 'pg'
 
 group :development, :test do
   gem 'byebug'
@@ -29,6 +29,6 @@ group :development do
 end
 
 group :production do
-  gem 'pg'
+#  gem 'pg'
   gem 'rails_12factor'
 end
