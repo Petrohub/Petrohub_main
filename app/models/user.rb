@@ -2,7 +2,7 @@ class User < ActiveRecord::Base
   before_validation :generate_account_number
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
-  
+
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
@@ -20,7 +20,19 @@ class User < ActiveRecord::Base
     self.type == "Retailer"
   end
 
-  
+  def active_for_authentication?
+   super && approved?
+ end
+
+ def inactive_message
+   if !approved?
+     :not_approved
+   else
+     super # Use whatever other message
+   end
+ end
+
+
 
 private
 #this method generates and assigns random account number to the users

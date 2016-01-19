@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160104152813) do
+ActiveRecord::Schema.define(version: 20160119173235) do
 
   create_table "admins", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -86,6 +86,7 @@ ActiveRecord::Schema.define(version: 20160104152813) do
     t.string   "zip_code"
     t.string   "years_in_business"
     t.string   "account_number"
+    t.boolean  "approved"
   end
 
   add_index "users", ["account_number"], name: "index_users_on_account_number"
