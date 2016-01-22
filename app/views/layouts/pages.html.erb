@@ -13,9 +13,8 @@
   <header>
 <%= render 'layouts/header' %>
 </header>
-            <%= render 'layouts/retailer_sidebar' if retailer_signed_in?  %>
-            <%= render 'layouts/supplier_sidebar' if supplier_signed_in? %>
-            <div class="container">
+          
+<div class="container">
 <%= yield %>
 </div>
 </body>
