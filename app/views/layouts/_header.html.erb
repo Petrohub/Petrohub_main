@@ -1,4 +1,4 @@
-<nav class="navbar navbar-dark">
+<nav class="navbar navbar-default">
         <div class="navbar-header">
           <% if user_signed_in? && current_user.retailer?%>
           <a class="navbar-brand" href="/retailer/dashboard">Petrohub</a>
@@ -10,7 +10,7 @@
           <a class="navbar-brand" href="/">Petrohub</a>
           <%end%>
         </div>
-        <% if user_signed_in? %> %>
+        <% if user_signed_in? %>
         <a class='toggle-nav btn pull-left' href='#'>
          <i class='icon-reorder'></i>
        </a>
