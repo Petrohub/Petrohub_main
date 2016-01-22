@@ -11,7 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160119173235) do
+ActiveRecord::Schema.define(version: 20160122190503) do
+
+  create_table "retailer_suppliers", force: :cascade do |t|
+    t.integer  "retailer_id"
+    t.integer  "supplier_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "retailer_suppliers", ["retailer_id"], name: "index_retailer_suppliers_on_retailer_id"
+  add_index "retailer_suppliers", ["supplier_id"], name: "index_retailer_suppliers_on_supplier_id"
 
   create_table "stations", force: :cascade do |t|
     t.string   "brand"
