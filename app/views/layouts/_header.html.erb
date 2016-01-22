@@ -1,24 +1,27 @@
 <nav class="navbar navbar-dark">
         <div class="navbar-header">
-          <% if retailer_signed_in? %>
+          <% if user_signed_in? && current_user.retailer?%>
           <a class="navbar-brand" href="/retailer/dashboard">Petrohub</a>
-          <% elsif supplier_signed_in? %>
+          <% elsif user_signed_in? && current_user.supplier?%>
           <a class="navbar-brand" href="/supplier/dashboard">Petrohub</a>
+          <% elsif user_signed_in? && current_user.admin? %>
+          <a class="navbar-brand" href="/admin/dashboard">Petrohub</a>
           <% else %>
           <a class="navbar-brand" href="/">Petrohub</a>
           <%end%>
         </div>
-        <% if retailer_signed_in? || supplier_signed_in? %>
+        <% if user_signed_in? %> %>
         <a class='toggle-nav btn pull-left' href='#'>
          <i class='icon-reorder'></i>
        </a>
        <%end%>
           <ul class="nav">
 
-            <% if retailer_signed_in? %>
+            <% if user_signed_in? && current_user.retailer? %>
+              <li><a href="#">Profile</a></li>
               <li><%= link_to "Account Settings", edit_retailer_registration_path %></li>
               <li><%= link_to "Log Out", destroy_retailer_session_path,method: :delete%></li>
-           <% elsif supplier_signed_in? %>
+           <% elsif user_signed_in? && current_user.supplier? %>
                <li><a href="#">Profile</a></li>
               <li><%= link_to "Account Settings", edit_supplier_registration_path %></li>
               <li><%= link_to "Log Out", destroy_supplier_session_path, method: :delete %></li>
@@ -26,18 +29,13 @@
         <li><%= link_to "About", pages_about_path %></li>
         <li><%= link_to "Contact Us",pages_contact_path%></li>
         <li class="dropdown">
-           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Retailer?<span class="caret"></span></a>
+           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sign Up<span class="caret"></span></a>
            <ul class="dropdown-menu">
-            <li><%= link_to "Sign In", retailer_session_path %></li>
-            <li><%= link_to "Sign Up", new_retailer_registration_path %></li>
+            <li><%= link_to "Retailer", new_retailer_registration_path %></li>
+            <li><%= link_to "Supplier", new_supplier_registration_path %></li>
            </ul>
        </li>
-       <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Supplier?<span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><%= link_to "Sign In", supplier_session_path %></li>
-           <li><%= link_to "Sign Up", new_supplier_registration_path %></li>
-          </ul>
+            <li><%= link_to "Sign In", user_session_path %></li>
       </li>
         <% end %>
 

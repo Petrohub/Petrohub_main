@@ -13,9 +13,9 @@
   <header>
 <%= render 'layouts/header' %>
 </header>
-            <%= render 'layouts/retailer_sidebar' if retailer_signed_in?  %>
-            <%= render 'layouts/supplier_sidebar' if supplier_signed_in? %>
-            <%= render 'layouts/admin_sidebar' if admin_signed_in? %>
+            <%= render 'layouts/retailer_sidebar' if user_signed_in? && current_user.retailer?%>
+            <%= render 'layouts/supplier_sidebar' if user_signed_in? && current_user.supplier?%>
+            <%= render 'layouts/admin_sidebar' if user_signed_in? && current_user.admin?%>
       <section id='content'>
         <div class='container'>
           <div class='row' id='content-wrapper'>

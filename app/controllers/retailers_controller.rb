@@ -1,5 +1,5 @@
 class RetailersController < ApplicationController
-  before_action :authenticate_retailer!
+  before_action :authenticate_user!
 
 
   def dashboard

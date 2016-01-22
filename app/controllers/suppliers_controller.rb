@@ -1,5 +1,5 @@
 class SuppliersController < ApplicationController
-  before_action :authenticate_supplier!
+  before_action :authenticate_user!
 
 
 

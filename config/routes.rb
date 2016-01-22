@@ -7,7 +7,7 @@ Rails.application.routes.draw do
     resources :tanks
   end
 
-
+  devise_for :users, skip: [:registration]
   devise_for :retailers
   devise_for :suppliers
   devise_for :admins, skip: [:registration]

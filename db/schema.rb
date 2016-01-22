@@ -13,16 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20160119173235) do
 
-  create_table "admins", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "retailers", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "stations", force: :cascade do |t|
     t.string   "brand"
     t.string   "business_name"
@@ -42,11 +32,6 @@ ActiveRecord::Schema.define(version: 20160119173235) do
   end
 
   add_index "stations", ["retailer_id"], name: "index_stations_on_retailer_id"
-
-  create_table "suppliers", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
 
   create_table "tanks", force: :cascade do |t|
     t.string   "type_of_fuel"
