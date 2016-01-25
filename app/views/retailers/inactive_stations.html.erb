@@ -7,14 +7,19 @@
           Stations
           </h1>
         </div>
-        <ul class="nav nav-pills">
-          <li role="presentation"><%= link_to "My stations", retailer_my_stations_path %></li>
-          <li role="presentation"  class="active"><%= link_to "Inactive Stations", retailer_inactive_stations_path %></li>
-          <li role="presentation"><%= link_to "Transfers", retailer_transfers_path %></li>
-          <li role="presentation" class="pull-right"> <%= link_to new_station_path do %>
-                <span class="btn btn-success"><i class='icon-plus'></i> Add Station</span>
-            <% end %>
-          </li>
-        </ul>
+        <div class="dash-tool">
+        <div class="btn-group" role="group" id="dash_tool" aria-label="...">
+          <button type="button" class="btn btn-default"><%= link_to "My stations", retailer_my_stations_path %></button>
+          <button type="button" class="btn btn-default"><%= link_to "Inactive Stations", retailer_inactive_stations_path %></button>
+          <button type="button" class="btn btn-default"><%= link_to "Transfers", retailer_transfers_path %></button>
+          <button type="button" class="btn btn-success"><%= link_to new_station_path do %>
+                <i class='icon-plus'></i> Add Station</span>
+            <% end %></button>
+
+       </div>
+     </div>
       </div>
     </div>
+
+
+<h1> You dont have any inactive stations </h1>
