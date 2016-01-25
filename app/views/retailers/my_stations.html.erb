@@ -4,11 +4,18 @@
       <div class='col-sm-12'>
         <div class='page-header'>
           <h1 class='pull-left'>
-            <%= link_to new_station_path do %>
-                <span class="btn btn-success btn-lg"><i class='icon-plus'></i> Add Station</span>
-            <% end %>
+          Stations
           </h1>
         </div>
+        <ul class="nav nav-pills">
+          <li role="presentation"  class="active"><%= link_to "My stations", retailer_my_stations_path %></li>
+          <li role="presentation"><%= link_to "Inactive Stations", retailer_inactive_stations_path %></li>
+          <li role="presentation"><%= link_to "Transfers", retailer_transfers_path %></li>
+          <li role="presentation" class='pull-right'> <%= link_to new_station_path do %>
+                <span class="btn btn-success"><i class='icon-plus'></i> Add Station</span>
+            <% end %>
+          </li>
+        </ul>
       </div>
     </div>
 

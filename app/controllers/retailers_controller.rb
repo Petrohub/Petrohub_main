@@ -10,4 +10,10 @@ class RetailersController < ApplicationController
     @stations = current_user.stations.all
   end
 
+  def inactive_stations
+  end
+
+  def transfers
+  end
+
 end
