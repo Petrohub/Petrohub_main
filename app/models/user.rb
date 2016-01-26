@@ -34,7 +34,7 @@ class User < ActiveRecord::Base
 
 
 
-private
+
 #this method generates and assigns random account number to the users
   def generate_account_number
     rand_num = SecureRandom.hex(3).upcase
