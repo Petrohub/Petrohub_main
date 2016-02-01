@@ -78,4 +78,56 @@ end
 def fuel_type
   ['Regular', 'Plus', 'Super', 'Diesel']
 end
+
+def fuel_brands
+  [
+    'Amoco',
+    'ARCO',
+    'BP',
+    'Chevron',
+    'Circle K',
+    'Citgo',
+    'Clark Brands',
+    'Costco',
+    'Cumberland Farms',
+    'Exxon',
+    'Flying J',
+    'Gas City, Ltd.',
+    'Getty',
+    'Go-Mar',
+    'Gulf',
+    'Hess',
+    'High\'s Dairy Stores',
+    'Holiday',
+    'Irving Oil',
+    'Kroger brand gasoline',
+    'Kum & Go',
+    'Kwik Trip',
+    'Love\'s',
+    'Lukoil',
+    'Marathon Oil',
+    'Mobil',
+    'Murphy USA',
+    'Phillips 66',
+    'Pilot',
+    'QuickChek',
+    'QuikTrip',
+    'RaceTrac/Raceway',
+    'Shell',
+    'Royal Farms',
+    'Rutter\'s Farm Stores',
+    '7-Eleven brand gasoline',
+    '76',
+    'Sam\'s Club',
+    'Sheetz',
+    'Sinclair',
+    'Speedway',
+    'Spinx',
+    'Sunoco',
+    'Texaco',
+    'Travelcenters of America',
+    'Valero',
+    'Wawa'
+]
+end
 end

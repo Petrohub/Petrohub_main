@@ -3,7 +3,7 @@
  <%= f.error_notification %>
 
  <div class="form-inputs">
-   <%= f.input :brand, label: "Brand"%>
+   <%= f.input :brand, label: "Brand",:collection => fuel_brands, :selected => "Exxon"%>
    <%= f.input :business_name, label: "Business Name" %>
    <%= f.input :tax_id , label: "Tax ID"%>
    <%= f.input :phone_number, label: "Phone Number" %>
