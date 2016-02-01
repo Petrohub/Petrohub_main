@@ -68,6 +68,7 @@
   <strong>Retailer:</strong>
   <%= @station.retailer %>
 </p>
+</div>
 <h2>Tanks</h2>
 <% @station.tanks.each do |comment| %>
   <p>
@@ -85,7 +86,7 @@
   </p>
 <% end %>
 
-<h2>Add a comment:</h2>
+<h2>Add a Tank</h2>
 <%= simple_form_for([@station, @station.tanks.build]) do |f| %>
 <div class="form-inputs">
   <%= f.input :type_of_fuel, label: "Fuel Type"%>
@@ -101,4 +102,3 @@
 
 <%= link_to 'Edit', edit_station_path(@station) %> |
 <%= link_to 'Back', stations_path %>
-</div>
