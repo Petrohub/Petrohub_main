@@ -74,4 +74,8 @@ def us_states
      ['Wyoming', 'WY']
    ]
 end
+
+def fuel_type
+  ['Regular', 'Plus', 'Super', 'Diesel']
+end
 end
