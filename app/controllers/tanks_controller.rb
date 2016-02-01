@@ -36,12 +36,8 @@ class TanksController < ApplicationController
   # POST /tanks.json
   def create
     @station = Station.find(params[:station_id])
-    @tank = @station.tanks.new(tank_params)
-    if @tank.save
-      redirect_to station_tank_path(@station, @tank)
-    else
-      render "new"
-    end
+    @tank = @station.tanks.create(tank_params)
+    redirect_to station_path(@station)
   end
 
   # PATCH/PUT /tanks/1
