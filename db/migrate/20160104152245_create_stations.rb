@@ -13,8 +13,11 @@ class CreateStations < ActiveRecord::Migration
       t.string :state
       t.string :zip
       t.string :station_reg_number
-      t.references :user, index: true, foreign_key: true
-    
+      t.references :retailer, index: true
+      t.integer :retailer_id
+
+
+
 
       t.timestamps null: false
     end
