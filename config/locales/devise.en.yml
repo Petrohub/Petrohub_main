@@ -43,7 +43,7 @@ en:
       signed_up_but_unconfirmed: "A message with a confirmation link has been sent to your email address. Please follow the link to activate your account."
       update_needs_confirmation: "You updated your account successfully, but we need to verify your new email address. Please check your email and follow the confirm link to confirm your new email address."
       updated: "Your account has been updated successfully."
-      signed_up_but_not_approved: 'You have signed up successfully but your account has not been approved by your administrator yet. Please wait for the Petrohub Approval. We might contact you shortly. You can reach us at +1(267)-60-PETRO'
+      signed_up_but_not_approved: 'You have signed up successfully but your account has not been approved by your administrator yet. Please wait for the Petrohub Approval. We might contact you shortly. You can reach us at +1(267)-60-PETRO from 9 A.M EST to 5 P.M EST'
     sessions:
       signed_in: "Signed in successfully."
       signed_out: "Signed out successfully."
