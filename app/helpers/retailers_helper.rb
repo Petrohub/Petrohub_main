@@ -36,13 +36,13 @@ module RetailersHelper
     when 'High\'s Dairy Stores'
       image_tag('highs.jpeg', height: '230', width: '230' )
     when 'Holiday'
-      image_tag('', height: '230', width: '230' )
+      image_tag('holiday.jpg', height: '230', width: '230' )
     when 'Irving Oil'
-      image_tag('', height: '230', width: '230' )
+      image_tag('irving.png', height: '230', width: '230' )
     when 'Kroger brand gasoline'
-      image_tag('', height: '230', width: '230' )
+      image_tag('kroger.png', height: '230', width: '230' )
     when 'Kum & Go'
-      image_tag('', height: '230', width: '230' )
+      image_tag('kum.gif', height: '230', width: '230' )
     when 'Kwik Trip'
       image_tag('', height: '230', width: '230' )
     when 'Love\'s'
