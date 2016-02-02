@@ -24,11 +24,11 @@ module RetailersHelper
     when 'Flying J'
       image_tag('FLYING_J.jpg', height: '230', width: '230' )
     when 'Gas City, Ltd.'
-      image_tag('http://cartype.com/pics/1308/full/amoco_logo.jpg', height: '230', width: '230' )
+      image_tag('default.jpg', height: '230', width: '230' )
     when 'Getty'
       image_tag('getty.jpg', height: '230', width: '230' )
     when 'Go-Mar'
-      image_tag('http://cartype.com/pics/1308/full/amoco_logo.jpg', height: '230', width: '230' )
+      image_tag('default.jpg', height: '230', width: '230' )
     when 'Gulf'
       image_tag('gulf.jpg', height: '230', width: '230' )
     when 'Hess'
@@ -44,59 +44,59 @@ module RetailersHelper
     when 'Kum & Go'
       image_tag('kum.gif', height: '230', width: '230' )
     when 'Kwik Trip'
-      image_tag('', height: '230', width: '230' )
+      image_tag('kwiktrip.jpg', height: '230', width: '230' )
     when 'Love\'s'
-      image_tag('', height: '230', width: '230' )
+      image_tag('loves.jpg', height: '230', width: '230' )
     when 'Marathon Oil'
-      image_tag('', height: '230', width: '230' )
+      image_tag('marathon.png', height: '230', width: '230' )
     when 'Lukoil'
-      image_tag('', height: '230', width: '230' )
+      image_tag('lukoil.png', height: '230', width: '230' )
     when 'Mobil'
-      image_tag('', height: '230', width: '230' )
+      image_tag('mobil.png', height: '230', width: '230' )
     when 'Murphy USA'
-      image_tag('', height: '230', width: '230' )
+      image_tag('murphy.png', height: '230', width: '230' )
     when 'Phillips 66'
-      image_tag('', height: '230', width: '230' )
+      image_tag('phillips66.jpg', height: '230', width: '230' )
     when 'Pilot'
-      image_tag('', height: '230', width: '230' )
+      image_tag('pilot.jpg', height: '230', width: '230' )
     when 'QuickChek'
-      image_tag('', height: '230', width: '230' )
+      image_tag('quickchek.png', height: '230', width: '230' )
     when 'QuikTrip'
-      image_tag('', height: '230', width: '230' )
+      image_tag('quicktrip.jpg', height: '230', width: '230' )
     when 'RaceTrac/Raceway'
-      image_tag('', height: '230', width: '230' )
+      image_tag('racetrac.jpg', height: '230', width: '230' )
     when 'Shell'
-      image_tag('', height: '230', width: '230' )
+      image_tag('shell.png', height: '230', width: '230' )
     when 'Royal Farms'
-      image_tag('', height: '230', width: '230' )
+      image_tag('royalfarms.png', height: '230', width: '230' )
     when 'Rutter\'s Farm Stores'
-      image_tag('', height: '230', width: '230' )
+      image_tag('default.jpg', height: '230', width: '230' )
     when '7-Eleven brand gasoline'
-      image_tag('', height: '230', width: '230' )
+      image_tag('711.png', height: '230', width: '230' )
     when '76'
-      image_tag('', height: '230', width: '230' )
+      image_tag('76.png', height: '230', width: '230' )
     when 'Sam\'s Club'
-      image_tag('', height: '230', width: '230' )
+      image_tag('samsclub.png', height: '230', width: '230' )
     when 'Sheetz'
-      image_tag('', height: '230', width: '230' )
+      image_tag('default.jpg', height: '230', width: '230' )
     when 'Sinclair'
-      image_tag('', height: '230', width: '230' )
+      image_tag('default.jpg', height: '230', width: '230' )
     when 'Speedway'
-      image_tag('', height: '230', width: '230' )
+      image_tag('speedway.png', height: '230', width: '230' )
     when 'Spinx'
-      image_tag('', height: '230', width: '230' )
+      image_tag('default.jpg', height: '230', width: '230' )
     when 'Sunoco'
-      image_tag('', height: '230', width: '230' )
+      image_tag('sunoco.png', height: '230', width: '230' )
     when 'Texaco'
-      image_tag('', height: '230', width: '230' )
+      image_tag('texaco.png', height: '230', width: '230' )
     when 'Travelcenters of America'
-      image_tag('', height: '230', width: '230' )
+      image_tag('default.jpg', height: '230', width: '230' )
     when 'Valero'
-      image_tag('', height: '230', width: '230' )
+      image_tag('valero.png', height: '230', width: '230' )
     when 'Wawa'
-      image_tag('', height: '230', width: '230' )
+      image_tag('wawa.jpg', height: '230', width: '230' )
     else
-      image_tag('http://cartype.com/pics/1308/full/amoco_logo.jpg', height: '230', width: '230' )
+      image_tag('default.jpg', height: '230', width: '230' )
     end
 
   end

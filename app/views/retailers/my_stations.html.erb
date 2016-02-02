@@ -3,21 +3,19 @@
 
 
 <% @stations.each do |station| %>
-              <div class="col-sm-12 box" style="margin-bottom: 0">
+              <div class="box"  style="margin-bottom: 0">
                   <div class="box-header dark-background">
                     <div class="title"><%= station.brand %></div>
                     <div class="actions">
                         <%=link_to station_path(station) do %>
                               <span class="btn btn-danger">View</span>
                               <%end%>
-                        <a class="btn box-collapse btn-xs btn-link" href="#"><i></i>
-                      </a>
                     </div>
                   </div>
                   <div class="box-content">
                   <div class="station-image"><%= image_for(station)%></div>
                   <div class="station-data">
-                  
+
                   </div>
                 </div>
                   <hr class="hr-drouble">
