@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
 
-  
+
 
   def role?
     self.class.name.downcase.to_sym
@@ -42,11 +42,11 @@ private
   def generate_account_number
     rand_num = SecureRandom.hex(3).upcase
     if self.admin?
-      self.account_number = "EGYPT" + "-" + rand_num
+      self.account_number = "EGYPT"+"-"+rand_num
     elsif self.retailer?
-      self.account_number = "NJ" + "-" + rand_num  + "-" + "RET"
+      self.account_number = "NJ"+"-"+rand_num+"-"+"RET"
     elsif self.supplier?
-      self.account_number = "NJ" +"-" + rand_num + "-"  + "SUP"
+      self.account_number = "NJ"+"-"+rand_num+"-"+"SUP"
     else
       self.account_number = 0
     end

@@ -14,6 +14,6 @@ class RetailerSupplier < ActiveRecord::Base
 
 
 
-  private
+
 
 end
