@@ -1,9 +1,7 @@
 Rails.application.routes.draw do
 
 
-
-
-
+  resources :retailer_suppliers
 
   resources :stations do
     resources :tanks
@@ -13,7 +11,7 @@ Rails.application.routes.draw do
   devise_for :retailers
   devise_for :suppliers
   devise_for :admins, skip: [:registration]
-
+  get 'retailer_suppliers/pending' => "retailer_suppliers#pending"
   get 'pages/about'
   get 'pages/contact'
   get 'retailer/transfers' => "retailers#transfers"
