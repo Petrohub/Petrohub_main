@@ -5,7 +5,7 @@
 <% @stations.each do |station| %>
               <div class="station box"  style="margin-bottom: 0">
                   <div class="box-header dark-background">
-                    <div class="title"><%= station.brand %></div>
+                    <div class="title"><%= station.brand + " " + "@" + " " + station.city + " " + "-" + station.zip%></div>
                     <div class="actions">
                         <%=link_to station_path(station) do %>
                               <span class="btn btn-danger">View Station</span>
