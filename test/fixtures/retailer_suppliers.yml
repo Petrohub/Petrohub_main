@@ -1,9 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  retailer_id: 
-  supplier_id: 
+  retailer_id: 1
+  supplier_id: 1
+  approved: false
 
 two:
-  retailer_id: 
-  supplier_id: 
+  retailer_id: 1
+  supplier_id: 1
+  approved: false

@@ -11,10 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160119173235) do
+ActiveRecord::Schema.define(version: 20160202185913) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "retailer_suppliers", force: :cascade do |t|
+    t.integer  "retailer_id"
+    t.integer  "supplier_id"
+    t.boolean  "approved",    default: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+  end
 
   create_table "stations", force: :cascade do |t|
     t.string   "brand"
@@ -75,6 +83,7 @@ ActiveRecord::Schema.define(version: 20160119173235) do
     t.string   "years_in_business"
     t.string   "account_number"
     t.boolean  "approved"
+    t.integer  "retailer_supplier_id"
   end
 
   add_index "users", ["account_number"], name: "index_users_on_account_number", using: :btree
