@@ -45,6 +45,6 @@ class RetailerSuppliersController < ApplicationController
   end
 
   def set_retailer
-    @retailer = Retailer.find(params[:id])
+    @retailer = current_user if current_user.retailer?
   end
 end
