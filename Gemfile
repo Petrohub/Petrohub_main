@@ -17,6 +17,8 @@ gem 'cancancan', '~> 1.10'
 gem 'country_select'
 gem 'compass-rails', '~> 2.0', '>= 2.0.5'
 gem 'pg'
+gem "refile", require: "refile/rails"
+gem "refile-mini_magick"
 
 
 group :development, :test do
