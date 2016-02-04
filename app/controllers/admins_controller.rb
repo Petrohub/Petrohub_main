@@ -1,7 +1,6 @@
 class AdminsController < ApplicationController
   before_action :authenticate_user!
 
-
   def dashboard
   end
 
@@ -12,8 +11,4 @@ class AdminsController < ApplicationController
   def retailers
     @retailers = Retailer.all
   end
-
-
-
-
 end

@@ -1,52 +1,54 @@
 <div id="wrapper">
   <div id='main-nav-bg'></div>
   <nav class='main-nav-fixed' id='main-nav'>
-        <div class='navigation'>
-          <ul class='nav nav-stacked'>
-            <li class=''>
-              <%= link_to retailer_dashboard_path do %>
-                  <i class='icon-tasks'></i>
-                  <span class = "text-error"><strong><%=current_user.account_number%></strong></span>
-              <% end %>
-            </li>
-            <li class=''>
-              <%= link_to retailer_my_stations_path do %>
-                  <i class='icon-beer'></i>
-                  <span>My Stations</span>
-              <% end %>
-            </li>
-            <li class=''>
-              <%= link_to retailer_my_stations_path do %>
-                  <i class='icon-truck'></i>
-                  <span>My Orders</span>
-              <% end %>
-            </li>
+    <div class='navigation'>
+      <ul class='nav nav-stacked'>
+        <li class=''>
+          <%= link_to retailer_dashboard_path do %>
+          <i class='icon-tasks'></i>
+          <span class="text-error">
+            <strong><%=current_user.account_number%></strong>
+          </span>
+          <% end %>
+        </li>
+        <li class=''>
+          <%= link_to retailer_my_stations_path do %>
+          <i class='icon-beer'></i>
+          <span>My Stations</span>
+          <% end %>
+        </li>
+        <li class=''>
+          <%= link_to retailer_my_stations_path do %>
+          <i class='icon-truck'></i>
+          <span>My Orders</span>
+          <% end %>
+        </li>
 
-            <li class=''>
-              <%= link_to retailer_suppliers_path do %>
-                  <i class='icon-group'></i>
-                  <span>My Suppliers</span>
-              <% end %>
-            </li>
-            <li class=''>
-              <%= link_to retailer_my_stations_path do %>
-                  <i class='icon-folder-open'></i>
-                  <span>My Documents</span>
-              <% end %>
-            </li>
-            <li class=''>
-              <%= link_to retailer_my_stations_path do %>
-                  <i class='icon-bar-chart'></i>
-                  <span>Reports</span>
-              <% end %>
-            </li>
-            <li class=''>
-              <%= link_to retailer_my_stations_path do %>
-                  <i class='icon-file-text'></i>
-                  <span>My Invoices</span>
-              <% end %>
-            </li>
-          </ul>
-        </div>
-      </div>
-     </nav>
+        <li class=''>
+          <%= link_to retailer_suppliers_path do %>
+          <i class='icon-group'></i>
+          <span>My Suppliers</span>
+          <% end %>
+        </li>
+        <li class=''>
+          <%= link_to retailer_my_stations_path do %>
+          <i class='icon-folder-open'></i>
+          <span>My Documents</span>
+          <% end %>
+        </li>
+        <li class=''>
+          <%= link_to retailer_my_stations_path do %>
+          <i class='icon-bar-chart'></i>
+          <span>Reports</span>
+          <% end %>
+        </li>
+        <li class=''>
+          <%= link_to retailer_my_stations_path do %>
+          <i class='icon-file-text'></i>
+          <span>My Invoices</span>
+          <% end %>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

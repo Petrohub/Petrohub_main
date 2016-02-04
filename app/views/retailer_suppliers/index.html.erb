@@ -1,59 +1,59 @@
 <%= render 'nav' %>
 <div class="row">
-                <div class="col-sm-12">
-                  <div class="box bordered-box blue-border" style="margin-bottom:0;">
-                    <div class="box-header blue-background">
-                      <div class="title">All Suppliers</div>
+  <div class="col-sm-12">
+    <div class="box bordered-box blue-border" style="margin-bottom:0;">
+      <div class="box-header blue-background">
+        <div class="title">All Suppliers</div>
+      </div>
+      <div class="box-content box-no-padding">
+        <div class="responsive-table">
+          <div class="scrollable-area">
+            <table class="table" style="margin-bottom:0;">
+              <thead>
+                <tr>
+                  <th>
+                    Name
+                  </th>
+                  <th>
+                    E-mail
+                  </th>
+                  <th>
+                    Status
+                  </th>
+                  <th></th>
+                </tr>
+              </thead>
+              <% @connection.each do |connection|%>
+              <tbody>
+                <tr>
+                  <td><%= connection.supplier.first_name + " " + connection.supplier.last_name %></td>
+                  <td><%= connection.supplier.email %></td>
+                  <td>
+                    <% if connection.pending? %>
+                    <span class="label label-warning">Pending</span>
+                    <%elsif connection.approved?%>
+                    <span class="label label-success">Approved</span>
+                    <%else%>
+                    <span class="label label-danger">Declined</span>
+                    <%end%>
+                  </td>
+                  <td>
+                    <div class="text-right">
+                      <a class="btn btn-success btn-xs" href="#">
+                        <i class="icon-ok"></i>
+                      </a>
+                      <a class="btn btn-danger btn-xs" href="#">
+                        <i class="icon-remove"></i>
+                      </a>
                     </div>
-                    <div class="box-content box-no-padding">
-                      <div class="responsive-table">
-                        <div class="scrollable-area">
-                          <table class="table" style="margin-bottom:0;">
-                            <thead>
-                              <tr>
-                                <th>
-                                  Name
-                                </th>
-                                <th>
-                                  E-mail
-                                </th>
-                                <th>
-                                  Status
-                                </th>
-                                <th></th>
-                              </tr>
-                            </thead>
-                            <% @connection.each do |connection|%>
-                            <tbody>
-                              <tr>
-                                <td><%= connection.supplier.first_name + " " + connection.supplier.last_name %></td>
-                                <td><%= connection.supplier.email %></td>
-                                <td>
-                                  <% if connection.pending? %>
-                                    <span class="label label-warning">Pending</span>
-                                  <%elsif connection.approved?%>
-                                    <span class="label label-success">Approved</span>
-                                  <%else%>
-                                    <span class="label label-danger">Declined</span>
-                                    <%end%>
-                                </td>
-                                <td>
-                                  <div class="text-right">
-                                    <a class="btn btn-success btn-xs" href="#">
-                                      <i class="icon-ok"></i>
-                                    </a>
-                                    <a class="btn btn-danger btn-xs" href="#">
-                                      <i class="icon-remove"></i>
-                                    </a>
-                                  </div>
-                                </td>
-                              </tr>
-                            </tbody>
-                                <%end%>
-                          </table>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+                  </td>
+                </tr>
+              </tbody>
+              <%end%>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

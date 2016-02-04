@@ -1,7 +1,6 @@
 class RetailersController < ApplicationController
   before_action :authenticate_user!
 
-
   def dashboard
     @retailer = current_user
   end
@@ -15,5 +14,4 @@ class RetailersController < ApplicationController
 
   def transfers
   end
-
 end

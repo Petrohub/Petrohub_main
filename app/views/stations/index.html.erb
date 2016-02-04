@@ -24,24 +24,24 @@
 
   <tbody>
     <% @stations.each do |station| %>
-      <tr>
-        <td><%= station.brand %></td>
-        <td><%= station.business_name %></td>
-        <td><%= station.tax_id %></td>
-        <td><%= station.phone_number %></td>
-        <td><%= station.contact_person %></td>
-        <td><%= station.cell_number %></td>
-        <td><%= station.address1 %></td>
-        <td><%= station.address2 %></td>
-        <td><%= station.city %></td>
-        <td><%= station.state %></td>
-        <td><%= station.zip %></td>
-        <td><%= station.station_reg_number %></td>
-        <td><%= station.retailer %></td>
-        <td><%= link_to 'Show', station %></td>
-        <td><%= link_to 'Edit', edit_station_path(station) %></td>
-        <td><%= link_to 'Destroy', station, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+    <tr>
+      <td><%= station.brand %></td>
+      <td><%= station.business_name %></td>
+      <td><%= station.tax_id %></td>
+      <td><%= station.phone_number %></td>
+      <td><%= station.contact_person %></td>
+      <td><%= station.cell_number %></td>
+      <td><%= station.address1 %></td>
+      <td><%= station.address2 %></td>
+      <td><%= station.city %></td>
+      <td><%= station.state %></td>
+      <td><%= station.zip %></td>
+      <td><%= station.station_reg_number %></td>
+      <td><%= station.retailer %></td>
+      <td><%= link_to 'Show', station %></td>
+      <td><%= link_to 'Edit', edit_station_path(station) %></td>
+      <td><%= link_to 'Destroy', station, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
     <% end %>
   </tbody>
 </table>

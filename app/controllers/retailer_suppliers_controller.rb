@@ -1,9 +1,6 @@
 class RetailerSuppliersController < ApplicationController
-
   before_action :authenticate_user!
   before_action :set_retailer, only: [:create, :index]
-
-
 
   def index
     @connection = @retailer.retailer_suppliers.all
@@ -39,7 +36,6 @@ class RetailerSuppliersController < ApplicationController
   def secure_params
     params.require(:retailer_supplier).permit(:retailer_id, :supplier_id, :account_number, :message, :approval)
   end
-
 
   def set_supplier
   end

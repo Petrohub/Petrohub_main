@@ -1,90 +1,92 @@
-
 <%= render "my_stations"%>
 
-
 <% @stations.each do |station| %>
-              <div class="station box"  style="margin-bottom: 0">
-                  <div class="box-header dark-background">
-                    <div class="title"><%= station.brand + " " + "@" + " " + station.city + " " + "-" + station.zip%></div>
-                    <div class="actions">
-                        <%=link_to station_path(station) do %>
-                              <span class="btn btn-danger">View Station</span>
-                              <%end%>
+<div class="station box" style="margin-bottom: 0">
+  <div class="box-header dark-background">
+    <div class="title"><%= station.brand + " " + "@" + " " + station.city + " " + "-" + station.zip%></div>
+    <div class="actions">
+      <%=link_to station_path(station) do %>
+      <span class="btn btn-danger">View Station</span>
+      <%end%>
+    </div>
+  </div>
+  <div class="box-content">
+    <div class="station-image"><%= image_for(station)%></div>
+    <div class="station-data">
+      <div class="box bordered-box blue-border" style="margin-bottom:0;">
+        <div class="box-header grey-background">
+          <div class="title">
+            <i class="icon-truck"></i>Recent Orders</div>
+        </div>
+        <div class="box-content box-no-padding">
+          <div class="responsive-table">
+            <table class="table" style="margin-bottom:0;">
+              <thead>
+                <tr>
+                  <th>
+                    Fuel Type
+                  </th>
+                  <th>
+                    Supplier
+                  </th>
+                  <th>
+                    Status
+                  </th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Regular</td>
+                  <td>JK Petroleum</td>
+                  <td>
+                    <span class="label label-important">Warning</span>
+                  </td>
+                  <td>
+                    <div class="text-right">
+                      <a class="btn btn-xs" href="#">
+                        <i class="icon-edit">
+                          View/Edit</i>
+                      </a>
                     </div>
-                  </div>
-                  <div class="box-content">
-                  <div class="station-image"><%= image_for(station)%></div>
-                  <div class="station-data">
-                    <div class="box bordered-box blue-border" style="margin-bottom:0;">
-                 <div class="box-header grey-background">
-                   <div class="title"><i class="icon-truck"></i>Recent Orders</div>
-                 </div>
-                 <div class="box-content box-no-padding">
-                   <div class="responsive-table">
-                       <table class="table" style="margin-bottom:0;">
-                         <thead>
-                           <tr>
-                             <th>
-                              Fuel Type
-                             </th>
-                             <th>
-                               Supplier
-                             </th>
-                             <th>
-                               Status
-                             </th>
-                             <th></th>
-                           </tr>
-                         </thead>
-                         <tbody>
-                           <tr>
-                             <td>Regular</td>
-                             <td>JK Petroleum</td>
-                             <td>
-                               <span class="label label-important">Warning</span>
-                             </td>
-                             <td>
-                               <div class="text-right">
-                                 <a class="btn btn-xs" href="#">
-                                   <i class="icon-edit"> View/Edit</i>
-                                 </a>
-                               </div>
-                             </td>
-                           </tr>
-                           <tr>
-                             <td>Diesel</td>
-                             <td>ACME Petroleum</td>
-                             <td>
-                               <span class="label label-success">Success</span>
-                             </td>
-                             <td>
-                               <div class="text-right">
-                                 <a class="btn btn-xs" href="#">
-                                   <i class="icon-edit"> View/Edit</i>
-                                 </a>
-                               </div>
-                             </td>
-                           </tr>
-                           <tr>
-                             <td>Supreme</td>
-                             <td>Jerry Petroleum</td>
-                             <td>
-                               <span class="label label-warning">Pending</span>
-                             </td>
-                             <td>
-                               <div class="text-right">
-                                 <a class="btn  btn-xs" href="#">
-                                   <i class="icon-edit"> View/Edit</i>
-                                 </a>
-                               </div>
-                             </td>
-                           </tr>
-                         </tbody>
-                       </table>
-                   </div>
-                 </div>
-               </div>
-                  </div>
-                </div>
-                  <hr class="hr-drouble">
-<%end%>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Diesel</td>
+                  <td>ACME Petroleum</td>
+                  <td>
+                    <span class="label label-success">Success</span>
+                  </td>
+                  <td>
+                    <div class="text-right">
+                      <a class="btn btn-xs" href="#">
+                        <i class="icon-edit">
+                          View/Edit</i>
+                      </a>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Supreme</td>
+                  <td>Jerry Petroleum</td>
+                  <td>
+                    <span class="label label-warning">Pending</span>
+                  </td>
+                  <td>
+                    <div class="text-right">
+                      <a class="btn  btn-xs" href="#">
+                        <i class="icon-edit">
+                          View/Edit</i>
+                      </a>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr class="hr-drouble">
+  <%end%>

@@ -1,16 +1,18 @@
 <div id="wrapper">
   <div id='main-nav-bg'></div>
-      <nav class='main-nav-fixed' id='main-nav'>
-        <div class='navigation'>
-          <ul class='nav nav-stacked'>
-            <li class=''>
-              <%= link_to supplier_dashboard_path do %>
-                  <i class='icon-tasks'></i>
-                  <span class = "text-error"><strong><%=current_user.account_number%></strong></span>
-              <% end %>
-            </li>
+  <nav class='main-nav-fixed' id='main-nav'>
+    <div class='navigation'>
+      <ul class='nav nav-stacked'>
+        <li class=''>
+          <%= link_to supplier_dashboard_path do %>
+          <i class='icon-tasks'></i>
+          <span class="text-error">
+            <strong><%=current_user.account_number%></strong>
+          </span>
+          <% end %>
+        </li>
 
-          </ul>
-        </div>
-      </div>
-     </nav>
+      </ul>
+    </div>
+  </div>
+</nav>

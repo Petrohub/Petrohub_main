@@ -1,16 +1,15 @@
-
 <div class='col-sm-7 col-sm-offset-1'>
-<h2>Add a Tank</h2>
-<%= simple_form_for([@station, @station.tanks.build],:html => { :class => "form-horizontal" }) do |f| %>
-<div class="form-inputs">
-  <%= f.input :type_of_fuel, label: "Fuel Type",:collection => fuel_type, :selected => "Regular"%>
-  <%= f.input :size, label: "Size" %>
-  <%= f.input :registration_id, label: "Tank Registration ID"%>
-  <%= f.association :station, :as => :hidden %>
-</div>
+  <h2>Add a Tank</h2>
+  <%= simple_form_for([@station, @station.tanks.build],:html => { :class => "form-horizontal" }) do |f| %>
+  <div class="form-inputs">
+    <%= f.input :type_of_fuel, label: "Fuel Type",:collection => fuel_type, :selected => "Regular"%>
+    <%= f.input :size, label: "Size" %>
+    <%= f.input :registration_id, label: "Tank Registration ID"%>
+    <%= f.association :station, :as => :hidden %>
+  </div>
 
-<div class="form-actions">
-  <%= f.button :submit, class: "btn btn-primary" %>
-</div>
-<% end %>
+  <div class="form-actions">
+    <%= f.button :submit, class: "btn btn-primary" %>
+  </div>
+  <% end %>
 </div>

@@ -15,17 +15,17 @@
 
   <tbody>
     <% @tanks.each do |tank| %>
-      <tr>
-        <td><%= tank.type_of_fuel %></td>
-        <td><%= tank.size %></td>
-        <td><%= tank.registration_id %></td>
-        <td><%= tank.station %></td>
-        <td><%= link_to 'Show', station_tank_path(:id => tank.id,
+    <tr>
+      <td><%= tank.type_of_fuel %></td>
+      <td><%= tank.size %></td>
+      <td><%= tank.registration_id %></td>
+      <td><%= tank.station %></td>
+      <td><%= link_to 'Show', station_tank_path(:id => tank.id,
                                                   :station_id => @station.id) %></td>
-        <td><%= link_to 'Edit', edit_station_tank_path(:id => tank.id,
+      <td><%= link_to 'Edit', edit_station_tank_path(:id => tank.id,
                                                   :station_id => @station.id)%></td>
-        <td><%= link_to 'Destroy', [@station, tank], method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <td><%= link_to 'Destroy', [@station, tank], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
     <% end %>
   </tbody>
 </table>

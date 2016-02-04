@@ -5,15 +5,10 @@ class RetailerSupplier < ActiveRecord::Base
   enum approval: [:pending, :accept, :decline]
 
   def approved?
-    self.accept?
+    accept?
   end
 
   def declined?
-    self.decline?
+    decline?
   end
-
-
-
-
-
 end

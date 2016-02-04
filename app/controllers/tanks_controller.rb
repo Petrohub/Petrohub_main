@@ -1,10 +1,10 @@
 class TanksController < ApplicationController
-  #before_action :set_tank, only: [:show, :edit, :update, :destroy]
-  #before_action :set_station
+  # before_action :set_tank, only: [:show, :edit, :update, :destroy]
+  # before_action :set_station
 
-  #def set_station
+  # def set_station
 
-  #end
+  # end
 
   # GET /tanks
   # GET /tanks.json
@@ -22,8 +22,8 @@ class TanksController < ApplicationController
 
   # GET /tanks/new
   def new
-   @station = Station.find(params[:station_id])
-   @tank = @station.tanks.build
+    @station = Station.find(params[:station_id])
+    @tank = @station.tanks.build
   end
 
   # GET /tanks/1/edit
@@ -48,7 +48,7 @@ class TanksController < ApplicationController
     if @tank.update(tank_params)
       redirect_to station_tank_path(@station, @tank)
     else
-      render "edit"
+      render 'edit'
     end
   end
 
@@ -65,16 +65,15 @@ class TanksController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
 
+  # Use callbacks to share common setup or constraints between actions.
 
-
-    #def set_tank
-      #@tank = @station.tanks.find(params[:id])
+  # def set_tank
+  # @tank = @station.tanks.find(params[:id])
   #  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def tank_params
-      params.require(:tank).permit(:type_of_fuel, :size, :registration_id, :station_id)
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def tank_params
+    params.require(:tank).permit(:type_of_fuel, :size, :registration_id, :station_id)
+  end
 end

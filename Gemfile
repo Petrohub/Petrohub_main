@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby "2.3.0"
+ruby '2.3.0'
 
 gem 'rails', '~>4.2.5'
 gem 'sass-rails', '~> 5.0'
@@ -18,7 +18,6 @@ gem 'country_select'
 gem 'compass-rails', '~> 2.0', '>= 2.0.5'
 gem 'pg'
 
-
 group :development, :test do
   gem 'byebug'
 end
@@ -26,8 +25,8 @@ end
 group :development do
   gem 'web-console', '~> 2.0'
   gem 'spring'
-  gem "better_errors"
-  gem "binding_of_caller"
+  gem 'better_errors'
+  gem 'binding_of_caller'
 end
 
 group :production do

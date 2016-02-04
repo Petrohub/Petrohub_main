@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-layout "pages"
+  layout 'pages'
 
   def about
   end

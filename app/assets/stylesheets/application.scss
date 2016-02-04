@@ -3,11 +3,19 @@
 @import 'flatty/plugins/plugins';
 @import 'flatty/jquery/jquery_ui';
 @import 'flatty/dark-theme';
-
 .dash-tool {
   margin-bottom: 20px;
 }
-
-.station-image {display:inline-block;margin-right:5%; width:10%;}
-.station-data {float:right;margin-left:0;width:85%;}
-.station {height: 10%;}
+.station-image {
+  display: inline-block;
+  margin-right: 5%;
+  width: 10%;
+}
+.station-data {
+  float: right;
+  margin-left: 0;
+  width: 85%;
+}
+.station {
+  height: 10%;
+}

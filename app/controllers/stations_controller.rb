@@ -63,13 +63,14 @@ class StationsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_station
-      @station = Station.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def station_params
-      params.require(:station).permit(:brand, :business_name, :tax_id, :phone_number, :contact_person, :cell_number, :address1, :address2, :city, :state, :zip, :station_reg_number, :retailer_id)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_station
+    @station = Station.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def station_params
+    params.require(:station).permit(:brand, :business_name, :tax_id, :phone_number, :contact_person, :cell_number, :address1, :address2, :city, :state, :zip, :station_reg_number, :retailer_id)
+  end
 end
