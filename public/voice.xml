@@ -1,0 +1,9 @@
+<Response>
+<Say voice="alice">
+Hello Mohammad, Is shahid there?
+</Say>
+<Pause length="3"/>
+<Say voice="alice">
+ Tell him to fuck off.
+</Say>
+</Response>
